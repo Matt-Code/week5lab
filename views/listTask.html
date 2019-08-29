@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <a href="/"> Home</a>
+        <a href="/newTask"> Add new Task</a>
+    </h1>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td> Due Date</td>
+            <td>Description</td>
+        </tr>
+        <% for ( var i =0; i < taskDb.length;i++){ %>
+        <tr>
+            <td>
+                <%= taskDb[i].taskname %>
+            </td>
+            <td>
+                <%= taskDb[i].taskdue %>
+            </td>
+            <td>
+                <%= taskDb[i].taskdesc %>
+            </td>
+        </tr>
+        <% }%>
+        </h3>
+</body>
+
+</html>
