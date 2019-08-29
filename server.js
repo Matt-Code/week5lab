@@ -49,7 +49,7 @@ app.get('/listTask', function (req, res) {
     else
         //return the error html page to the client providing an error message
         res.sendFile(path2Views + 'error.html', {
-            error: "No task added, please Add New Task first"
+            error: "No task in database!"
         });
 });
 
@@ -72,7 +72,7 @@ app.post('/addNewTask', function (req, res) {
         //sending the error file to the client
         res.sendFile(path2Views + 'error.html', {
             //giving the client an error saying to fill in all information of task
-            error: "Please fill all information of Task"
+            error: "Missing information! Please try again"
         })
     //if the input fields are not empty
     else {
