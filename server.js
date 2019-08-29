@@ -48,9 +48,7 @@ app.get('/listTask', function (req, res) {
     //if the database is empty
     else
         //return the error html page to the client providing an error message
-        res.sendFile(path2Views + 'error.html', {
-            error: "No task in database!"
-        });
+        res.sendFile(path2Views + 'error.html');
 });
 
 //initialising a database array
@@ -70,10 +68,7 @@ app.post('/addNewTask', function (req, res) {
     //if the input fields are empty and the client clicks on submit, return the error page back to the client
     if (newRec.taskname == '' || newRec.taskdue == '' || newRec.taskdesc == '')
         //sending the error file to the client
-        res.sendFile(path2Views + 'error.html', {
-            //giving the client an error saying to fill in all information of task
-            error: "Missing information! Please try again"
-        })
+        res.sendFile(path2Views + 'error.html');
     //if the input fields are not empty
     else {
         //push the new record to the database array
